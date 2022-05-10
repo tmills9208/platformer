@@ -1,0 +1,3 @@
+[submodule "deps/bevy-parallax"]
+	path = deps/bevy-parallax
+	url = https://github.com/tmills9208/bevy-parallax.git
