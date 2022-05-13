@@ -13,5 +13,6 @@ bevy = "0.7"
 bevy-parallax = "0.1.2"
 
 # using forks here / and in "./.cargo/config.toml"
+# Edit: using git submodules atm
 # [patch.crates-io]
 # bevy-parallax = { path = "./deps/bevy-parallax" }

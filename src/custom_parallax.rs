@@ -7,14 +7,13 @@ use bevy_parallax::{
 pub struct CustomParallaxPlugin;
 impl Plugin for CustomParallaxPlugin {
     fn build(&self, app: &mut App) {
-        let parallax = ParallaxResource {
+        let parallax: ParallaxResource = ParallaxResource {
             layer_data: vec![
                 LayerData {
                     speed: 0.95,
                     speed_y: 1.0,
                     path: "parallax-mountain/parallax-mountain-bg.png".to_string(),
                     tile_size: Vec2::new(273.0, 160.0),
-
                     cols: 1,
                     rows: 1,
                     scale: 6.0,
