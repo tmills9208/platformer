@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+use bevy::prelude::State;
 // use bevy_parallax::{ParallaxResource, LayerData};
 
 mod hello;
@@ -33,4 +34,41 @@ fn main() {
         .add_plugin(HelloPlugin)
         //.add_plugin(AnimatedSpritePlugin)
         .run();
+}
+
+struct Life(u8);
+
+struct Player;
+
+#[derive(Bundle)]
+struct PlayerBundle {
+    life: Life,
+    is_player: Player,
+    #[bundle]
+    entity_bundle: EntityBundle,
+}
+
+struct Position {
+    x: f32,
+    y: f32,
+}
+
+enum BaseEntityStates {
+    Idle,
+    Running,
+    Walking,
+    Attack,
+    OnHit,
+    Death
+}
+
+#[derive(Bundle)]
+struct EntityBundle {
+    sprite_sheet_bundle: SpriteSheetBundle,
+    position: Position,
+    animation_state: State<BaseEntityStates>
+}
+
+fn setup_entity() {
+
 }

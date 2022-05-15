@@ -14,8 +14,10 @@ Requirements for EACH world/level:
 
 use bevy::prelude::*;
 
-pub struct World;
+pub struct GameScene;
 
-impl FromWorld for World {
-
+impl FromWorld for GameScene {
+  fn from_world(world: &mut World) -> Self {
+    
+  }
 }
