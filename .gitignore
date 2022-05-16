@@ -1,4 +1,4 @@
 /target
 
-*.ase
-*.aseprite
+# *.ase
+# *.aseprite
