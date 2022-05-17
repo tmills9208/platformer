@@ -46,6 +46,7 @@ fn setup(
     let texture_handle = asset_server.load("npcs/Warrior_Sheet-Effect.png");
     let texture_atlas = TextureAtlas::from_grid(texture_handle, Vec2::new(69.0, 44.0), 6, 17);
     let texture_atlas_handle = texture_atlases.add(texture_atlas);
+    
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
     commands
         .spawn_bundle(SpriteSheetBundle {
